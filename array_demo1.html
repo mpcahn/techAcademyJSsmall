@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Array Demo 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+  <h1 id="countdown">Click button for colors!</h1><br>
+  <button class="btn" onclick="up()">Start!</button>
+
+  <script>
+    var i = 0
+    var arr = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, "Happy New Year!"]
+    function up() {
+      if (i < arr.length) {
+        document.getElementById('countdown').style.color= "red"
+        document.getElementById('countdown').innerHTML = arr[i]
+        i++        
+      }
+      window.setTimeout(up, 250)
+    }
+  </script>
+</body>
+
+</html>
